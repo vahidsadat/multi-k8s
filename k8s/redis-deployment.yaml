@@ -12,7 +12,7 @@ spec:
       labels:
         component: redis
     spec:
-      containers: 
+      containers:
         - name: redis
           image: redis
           ports:

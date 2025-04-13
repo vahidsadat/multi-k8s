@@ -9,7 +9,7 @@ spec:
       component: server
   template:
     metadata:
-      labels: 
+      labels:
         component: server
     spec:
       containers:
@@ -18,8 +18,8 @@ spec:
           ports:
             - containerPort: 5000
           env:
-            - name: REDIS_POST
-              value:  redis-cluster-ip-service
+            - name: REDIS_HOST
+              value: redis-cluster-ip-service
             - name: REDIS_PORT
               value: '6379'
             - name: PGUSER
@@ -35,5 +35,3 @@ spec:
                 secretKeyRef:
                   name: pgpassword
                   key: PGPASSWORD
-
-            

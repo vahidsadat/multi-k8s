@@ -16,8 +16,7 @@ spec:
         - name: worker
           image: vahidsadat/multi-worker
           env:
-            - name: REDIS_POST
-              value:  redis-cluster-ip-service
+            - name: REDIS_HOST
+              value: redis-cluster-ip-service
             - name: REDIS_PORT
               value: '6379'
-          
